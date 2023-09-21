@@ -2,6 +2,8 @@ version: '3.7'
 services:
 
   bq:
+    # to use the previous working version, use the following image
+    # image: ghcr.io/kromiii/bigquery-emulator:0.4.5
     image: ghcr.io/kromiii/bigquery-emulator:0.4.7
     platform: linux/amd64
     ports:
