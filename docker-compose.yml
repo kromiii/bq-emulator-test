@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+
+  bq:
+    image: ghcr.io/kromiii/bigquery-emulator:0.4.7
+    platform: linux/amd64
+    ports:
+      - "9050:9050"
+    volumes:
+      - ./testdata:/testdata
+    command: "bigquery-emulator --project=test --data-from-yaml=../testdata/data.yaml"
